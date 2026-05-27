@@ -1,4 +1,5 @@
-const socket = io();
+//const socket = io();
+const socket = io("https://chor-dakat-babu-police.onrender.com");
 let currentRoomCode = null;
 let myRole = null;
 let playersList = [];
