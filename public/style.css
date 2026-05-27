@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  min-height: 100vh;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; text-align: center; }
+
+h1 { color: #ffd700; margin-bottom: 20px; }
+
+input, select, button {
+  padding: 12px 15px;
+  margin: 8px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background: #ff9800;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover { background: #f57c00; }
+
+/* Game Area */
+.header { margin: 15px 0; }
+.players {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+.player {
+  background: rgba(255,255,255,0.15);
+  padding: 12px 20px;
+  border-radius: 10px;
+  min-width: 140px;
+}
+
+.role-card {
+  background: #1e1e2f;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 450px;
+}
+
+.timer {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ff4757;
+  margin: 15px 0;
+}
+
+.phase-info {
+  font-size: 1.4rem;
+  min-height: 60px;
+  margin: 10px 0;
+}
+
+.hidden { display: none !important; }

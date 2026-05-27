@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chor Dakat Babu Police</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>চোর, ডাকাত, বাবু, পুলিশ</h1>
+
+    <!-- Join Screen -->
+    <div id="joinScreen">
+      <input type="text" id="playerName" placeholder="Enter your name" maxlength="15" />
+      
+      <div class="create-section">
+        <select id="totalRounds">
+          <option value="5">5 Rounds</option>
+          <option value="7">7 Rounds</option>
+          <option value="10">10 Rounds</option>
+        </select>
+        <button onclick="createRoom()">Create Room</button>
+      </div>
+
+      <div class="join-section">
+        <p>Have a Room Code?</p>
+        <input type="text" id="roomCodeInput" placeholder="Enter Room Code" maxlength="6" />
+        <button onclick="joinRoom()">Join Room</button>
+      </div>
+    </div>
+
+    <!-- Game Screen -->
+    <div id="gameScreen" class="hidden">
+      <div class="top-bar">
+        <div class="player-info">
+          <strong id="myNameDisplay"></strong>
+        </div>
+        <div class="room-info">
+          Room: <strong id="roomCodeDisplay"></strong>
+        </div>
+        <div class="score-info">
+          Score: <strong id="myTotalScore">0</strong>
+        </div>
+      </div>
+
+      <div class="header">
+        <h3>Round <span id="roundNumber">1</span>/<span id="totalRoundsDisplay">5</span></h3>
+      </div>
+
+      <div id="questionDisplay" class="question-box"></div>
+
+      <div id="playersList" class="players"></div>
+
+      <div class="game-area">
+        <div id="roleCard" class="role-card hidden">
+          <h2>Your Role</h2>
+          <h1 id="playerRole"></h1>
+        </div>
+
+        <div id="phaseInfo" class="phase-info"></div>
+        <div id="timer" class="timer">60</div>
+
+        <div id="votingArea" class="hidden">
+          <h3>Make Your Accusation</h3>
+          <div id="voteButtons"></div>
+        </div>
+
+        <div id="resultArea" class="hidden"></div>
+      </div>
+    </div>
+
+    <!-- Final Screen -->
+    <div id="finalScreen" class="hidden">
+      <h1>🏆 Game Over</h1>
+      <div id="finalLeaderboard"></div>
+      <button onclick="location.reload()">Play Again</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
